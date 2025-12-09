@@ -23,7 +23,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBdik6kB2T9ug6goz1ZHGUuy40_buA3_yY",
+  apiKey: "AIzaSyB-BMPgbh09kIpr_ZCrV-4uCiytc2vfwaM",
   authDomain: "vanderlust-app.firebaseapp.com",
   projectId: "vanderlust-app",
   storageBucket: "vanderlust-app.firebasestorage.app",
@@ -915,4 +915,5 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById("app-view").classList.add("hidden");
   }
 });
+
 
