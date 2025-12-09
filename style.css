@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+body { font-family: "Inter", sans-serif; background: #020202; color: white; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #333; }
+
+/* Glass Card */
+.glass-card {
+  background: rgba(20,20,25,0.85);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+/* Buttons */
+.btn-neon {
+  background: linear-gradient(135deg,#d946ef,#06b6d4);
+  color:#fff;
+  padding:12px 18px;
+  border-radius:12px;
+  transition:0.3s;
+}
+.btn-neon:hover { transform: translateY(-3px); }
+
+/* Inputs */
+.input-neon {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  color:white;
+  padding:12px 16px;
+  border-radius:12px;
+}
+
+/* ---------------------------------------
+   🔥 FIXED — BLACK SELECT DROPDOWN
+--------------------------------------- */
+select {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+}
+select option {
+  background: #000 !important;
+  color: white !important;
+}
+
+/* ---------------------------------------
+   🔥 FIXED — WHITE CALENDAR
+--------------------------------------- */
+input[type="date"] {
+  background: #fff !important;
+  color: #000 !important;
+  border-radius: 10px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+
+/* Destination Cards */
+.dest-card { 
+  position: relative; 
+  border-radius: 18px; 
+  overflow: hidden;
+  height: 280px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.dest-card:hover { transform: scale(1.05); }
+.dest-img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+.dest-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+/* Home highlight sections */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: 16px;
+}
+.highlight-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.highlight-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.6); }
+.highlight-card img{ width:100%; height:140px; object-fit:cover; }
+.highlight-body{ padding:12px; }
+.highlight-title{ font-weight:700; font-size:16px; }
+.highlight-sub{ font-size:12px; color: #9ca3af; margin-top:6px; }
+.highlight-price{ margin-top:8px; font-weight:800; color:#10b981; }
+
+/* Planner background */
+/* planner background removed — planner uses plain glass cards for clarity */
+
+/* Site logo styling */
+#site-logo { width: 40px; height: 40px; object-fit: contain; }
+
+/* Coupon chips on Home */
+#coupon-shelf { display: flex; align-items: center; gap: 12px; }
+#coupon-list { display: flex; gap: 8px; flex-wrap: wrap; }
+.coupon-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.4);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+}
+.coupon-chip:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 10px 26px rgba(2,6,23,0.5); }
+.coupon-chip.pulse { animation: popIn 480ms cubic-bezier(.2,.9,.2,1) forwards, floatY 3.5s ease-in-out 700ms infinite alternate; }
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes floatY {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+/* Flight item */
+.flight-item {
+  display:flex; justify-content:space-between;
+  background:rgba(255,255,255,0.05);
+  padding:20px; border-radius:12px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+/* Tickets */
+.ticket-container {
+  display:flex; background:#0a0a0a;
+  border-radius:16px; border:1px solid rgba(255,255,255,0.1);
+}
+.ticket-left {
+  flex:2; padding:20px;
+  border-right:2px dashed rgba(255,255,255,0.1);
+}
+.ticket-right { flex:1; display:flex; flex-direction:column; justify-content:center; }
+
+/* Toast */
+.toast {
+  background:#111;
+  padding:12px 18px;
+  border-radius:12px;
+  display:flex;
+}
+.toast-success { border-left:4px solid #10b981; }
+.toast-error { border-left:4px solid #ef4444; }
+
+.nav-links a.active {
+    color: #00c8ff;       /* sky blue highlight */
+    font-weight: 600;
+    border-bottom: 2px solid #00c8ff;
+    padding-bottom: 3px;
+}
+/* ACTIVE TAB STYLE */
+.nav-btn.nav-active {
+    color: #00c8ff !important;
+    font-weight: 700;
+    border-bottom: 2px solid #00c8ff;
+    padding-bottom: 4px;
+}
