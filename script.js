@@ -23,18 +23,14 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 const firebaseConfig = {
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-  apiKey: "AIzaSyB-BMPgbh09kIpr_ZCrV-4uCiytc2vfwaM",
-  authDomain: "vanderlust-app.firebaseapp.com",
-  projectId: "vanderlust-app",
-  storageBucket: "vanderlust-app.firebasestorage.app",
-  messagingSenderId: "837244433268",
-  appId: "1:837244433268:web:7638a14330c8bd7d217221",
-  measurementId: "G-FGZVYNJSZP"
-
+  apiKey: "AIzaSyBYmVG2xCG1L_aOOEY18SPkgTtNShbKTUw",
+  authDomain: "skytrail-88a7b.firebaseapp.com",
+  projectId: "skytrail-88a7b",
+  storageBucket: "skytrail-88a7b.firebasestorage.app",
+  messagingSenderId: "305571635602",
+  appId: "1:305571635602:web:7e3ad078a84ccfa834214b",
+  measurementId: "G-JKT59SMY5L"
 };
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
@@ -919,6 +915,7 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById("app-view").classList.add("hidden");
   }
 });
+
 
 
 
