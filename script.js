@@ -989,7 +989,3 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById("app-view").classList.add("hidden");
   }
 });
-
-
-
-
